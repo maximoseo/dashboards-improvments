@@ -1,0 +1,8 @@
+name: Greptile Index
+on: [pull_request]
+jobs:
+  greptile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: echo "Greptile config present; API-backed indexing requires GREPTILE_API_KEY"

@@ -1,0 +1,29 @@
+services:
+  - type: web
+    name: dashaudit-web
+    runtime: node
+    rootDir: apps/web
+    buildCommand: corepack enable && pnpm install --frozen-lockfile && pnpm build
+    startCommand: pnpm start
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+      - key: NEXT_PUBLIC_SUPABASE_URL
+        sync: false
+      - key: NEXT_PUBLIC_SUPABASE_ANON_KEY
+        sync: false
+  - type: worker
+    name: dashaudit-worker
+    runtime: docker
+    rootDir: apps/worker
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+      - key: WORKER
+        value: "true"
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_SERVICE_ROLE_KEY
+        sync: false
+      - key: MASTER_KEK
+        sync: false

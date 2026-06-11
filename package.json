@@ -1,0 +1,1 @@
+{"name":"dashaudit","private":true,"version":"0.1.0","packageManager":"pnpm@10.24.0","scripts":{"build":"pnpm -C apps/web build","lint":"pnpm -C apps/web lint","typecheck":"pnpm -C apps/web typecheck","test":"pnpm -C apps/web test","mobile:check":"pnpm -C apps/web mobile:check"},"devDependencies":{"typescript":"^5.7.3"}}

@@ -1,0 +1,7 @@
+name: CodeRabbit PR Review
+on: [pull_request]
+jobs:
+  coderabbit:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "CodeRabbit app/config handles review when installed"

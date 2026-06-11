@@ -1,0 +1,5 @@
+repositories:
+  - maximoseo/dashboards-improvments
+ignore:
+  - node_modules
+  - .next
