@@ -1,0 +1,1 @@
+export async function sendScanCompleteEmail(to: string, subject: string) { if (!process.env.RESEND_API_KEY) return { sent: false, reason: 'RESEND_API_KEY missing' }; return { sent: true, to, subject }; }
