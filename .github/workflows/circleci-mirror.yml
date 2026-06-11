@@ -1,0 +1,8 @@
+name: CircleCI Mirror
+on:
+  workflow_dispatch:
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Optional CircleCI parity hook placeholder"

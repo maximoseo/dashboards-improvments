@@ -1,0 +1,8 @@
+name: Qodo PR Review
+on: [pull_request]
+jobs:
+  qodo:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: echo "Qodo enabled when QODO_API_KEY is configured"

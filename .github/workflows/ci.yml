@@ -1,0 +1,26 @@
+name: CI
+on:
+  pull_request:
+  push:
+    branches: [main]
+jobs:
+  web:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with: { version: 11.5.0 }
+      - uses: actions/setup-node@v4
+        with: { node-version: 20, cache: pnpm }
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm lint
+      - run: pnpm typecheck
+      - run: pnpm test
+      - run: pnpm build
+      - run: pnpm mobile:check
+      - name: TestSprite placeholder
+        run: echo "TestSprite MCP configured; authenticated run requires TESTSPRITE_API_KEY"
+      - name: Sourcery placeholder
+        run: echo "Sourcery config present"
+      - name: Rafter placeholder
+        run: echo "Rafter config present"

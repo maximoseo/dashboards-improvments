@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "context7": { "command": "npx", "args": ["-y", "@upstash/context7-mcp@latest"] },
+    "testsprite": { "command": "npx", "args": ["-y", "@testsprite/mcp"] },
+    "greptile": { "command": "npx", "args": ["-y", "@greptile/mcp"] }
+  }
+}
